@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dhimy Jean — Portfolio</title>
+  <meta name="description" content="Portfolio website for Dhimy Jean: projects, skills, about, education, and contact." />
+  <meta property="og:title" content="Dhimy Jean — Portfolio" />
+  <meta property="og:description" content="Projects, skills, experience, education, and contact." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" role="banner">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home">Dhimy Jean</a>
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
+      <div class="links" id="nav-links">
+        <a class="btn" href="#home">Home</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#skills">Skills</a>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#education">Education</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="section hero">
+      <img 
+        class="hero-img" 
+        src="images/nyc-hero.jpg" 
+        alt="New York City skyline with One World Trade Center" 
+      />
+
+      <h1>Dhimy Jean</h1>
+      <p class="subtitle">
+        Technologist • Computer Science Professional <br>
+        Software Developer • System Analyst
+      </p>
+      <p class="lede">
+        I build clean, responsive web experiences and data-driven tools. 
+        My work spans full-stack development, data analysis, and system design — 
+        always focused on turning complexity into clarity. 
+        Below are selected projects, skills, and highlights.
+      </p>
+    </section>
+  
+        <!-- ===== PROJECTS ===== -->
+    <section id="projects" class="section">
+      <h2>📂 Featured Projects</h2>
+      <div class="grid grid-3">
+
+        <!-- Project 1 -->
+        <article class="card project">
+          <div class="card-body">
+            <img src="images/budget.png" alt="Dhimsoft Budget Dashboard screenshot" class="project-img" />
+            <h3>1. Dhimsoft Budget Dashboard</h3>
+            <p class="muted">
+              A professional financial tracking app designed to manage income, expenses, and savings in real time.
+            </p>
+            <ul>
+              <li>🐍 Built with <strong>Python, SQL, and Streamlit/Matplotlib</strong> for interactive dashboards.</li>
+              <li>💰 Features include <strong>transaction logging, category insights, and budget reports</strong>.</li>
+              <li>🛠️ Demonstrates <strong>backend logic, database management, and dashboard design</strong>.</li>
+            </ul>
+            <div class="links">
+              <a href="https://dhimsoft-budget-tracker-ikcpchd3xjv6u7rkf7gvih.streamlit.app/" target="_blank">🔗 Live Demo</a> | 
+              <a href="https://github.com/dhimsoft/dhimsoft-budget-tracker" target="_blank">🔗 View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card project">
+          <div class="card-body">
+            <img src="images/mta.png" alt="MTA Data Analysis screenshot" class="project-img" />
+            <h3>2. MTA Data Analysis</h3>
+            <p class="muted">
+              A data project analyzing NYC bus breakdowns and delays using MTA open datasets.
+            </p>
+            <ul>
+              <li>📊 Cleaned and transformed <strong>raw CSV data with Pandas</strong>.</li>
+              <li>🗽 Created insights on <strong>trends by borough, time, and delay category</strong>.</li>
+              <li>📈 Produced <strong>clear visualizations with Matplotlib/Seaborn in Jupyter Notebook</strong>.</li>
+              <li>🧩 Showcases <strong>real-world data wrangling, EDA, and storytelling with data</strong>.</li>
+            </ul>
+            <div class="links">
+              <a href="https://github.com/dhimsoft/mta_bus_project_dhimyjean" target="_blank">🔗 View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project">
+          <div class="card-body">
+            <img src="images/school.png" alt="Dhimsoft Academy Website screenshot" class="project-img" />
+            <h3>3. Dhimsoft Academy Website (Prototype)</h3>
+            <p class="muted">
+              A modern school website prototype built for educational institutions.
+            </p>
+            <ul>
+              <li>⚛️ Developed with <strong>Next.js, Tailwind CSS, and TypeScript</strong>.</li>
+              <li>🖼️ Includes pages for <strong>Programs, Admissions, Parents, Students, and Resources</strong>.</li>
+              <li>📅 Features <strong>interactive calendar, inquiry forms, and Google Maps integration</strong>.</li>
+              <li>🎨 Highlights <strong>responsive design, glassmorphism UI, and reusable components</strong>.</li>
+              <li>🚀 Deployed live on <strong>Vercel</strong>.</li>
+            </ul>
+            <div class="links">
+              <a href="https://dhimsoft-academy.vercel.app" target="_blank">🔗 Live Demo</a> | 
+              <a href="https://github.com/dhimsoft/dhimsoft-academy" target="_blank">🔗 View on GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+      <!-- ===== POEM WIDGET ===== -->
+      <section class="section">
+        <div class="widget">
+          <h3>Take a Break and be Poetic!</h3>
+          <div class="inputs">
+            <label>Enter the name of a plant:
+              <input id="plant" placeholder="e.g., orchid" />
+            </label>
+            <label>Enter the name of an animal:
+              <input id="animal" placeholder="e.g., dolphin" />
+            </label>
+          </div>
+          <div class="actions">
+            <button class="btn secondary" id="resetBtn">Reset</button>
+            <button class="btn" id="makeBtn">Make / Remake</button>
+          </div>
+          <p id="poem" class="center"></p>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section id="skills" class="section">
+        <h2>Skill Summary</h2>
+        <div class="stack">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">SQL</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Tailwind CSS</span>
+          <span class="chip">Flask</span>
+          <span class="chip">Streamlit</span>
+          <span class="chip">Docker</span>
+          <span class="chip">AWS</span>
+        </div>
+        <ul class="list">
+          <li><span class="star">★</span> Full-stack web development (vanilla & frameworks)</li>
+          <li><span class="star">★</span> Data analysis & visualization with Python</li>
+          <li><span class="star">★</span> Backend systems & API development</li>
+          <li><span class="star">★</span> Cloud deployment (AWS, Docker, GitHub Actions)</li>
+          <li><span class="star">★</span> Clean UI design with accessibility in mind</li>
+        </ul>
+      </section>
+
+    <!-- ===== CAREER HIGHLIGHTS ===== -->
+    <section id="experience-" class="section">
+      <h2>Career Highlights - Royal Caribbean International</h2>
+      <div class="two">
+
+        <!-- Role 1 -->
+        <div class="card">
+          <div class="card-body">
+            <h3>Senior Guest Services Officer</h3>
+            <div class="muted">2010 – 2012 · Global Ports</div>
+            <ul>
+              <li>Led a team of Guest Services Officers managing front-line guest relations and daily operations.</li>
+              <li>Resolved escalated complaints and VIP service requests, ensuring consistent service excellence.</li>
+              <li>Supervised onboarding/offboarding processes, balancing speed, accuracy, and customer satisfaction.</li>
+              <li>Mentored junior staff and maintained service standards across multicultural, high-pressure environments.</li>
+              <li>Leveraged fluency in Spanish, English, and French to bridge communication gaps with international guests.</li>
+              <li>Received formal recognition for outstanding service and guest satisfaction scores.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="card">
+          <div class="card-body">
+            <h3>Guest Administration Officer</h3>
+            <div class="muted">2012 – 2015 · Asia</div>
+            <ul>
+              <li>Promoted to oversee immigration and regulatory compliance for international cruises.</li>
+              <li>Managed enterprise systems including Fidelio Suite 8, JD Edwards, and Kronos for guest administration.</li>
+              <li>Prepared and verified guest manifests across 20+ international ports, ensuring accuracy under audits.</li>
+              <li>Coordinated with government and port authorities during embarkation/debarkation inspections.</li>
+              <li>Ensured compliance with immigration laws under high-pressure inspections and regulatory checks.</li>
+              <li>Streamlined workflows and introduced automation in reporting, improving operational efficiency.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <h2>👋 About Me</h2>
+      <div class="card">
+        <div class="card-body">
+          <p>I’m a <strong>technologist, computer scientist, creative thinker, and lifelong learner</strong> who thrives at the intersection of <em>global experience</em>, <em>technical innovation</em>, and <em>real-world problem-solving</em>. My journey spans the <strong>Caribbean, Asia, and Oceania</strong> — and today, I’m building <strong>AI-driven, data-powered software solutions</strong> that make an impact.</p>
+          <p><strong>🌍 My Journey</strong><br>
+          I began my career in the Dominican Republic, earning my <strong>degree as a Technologist in Software Engineering (UTESA)</strong>. Soon after, I joined <strong>Royal Caribbean International</strong>, where I grew through two demanding roles.</p>
+          <p><strong>Senior Guest Services Officer</strong> — I led a team of Guest Services Officers, managed daily front-line operations, and resolved complex, high-stakes issues. From VIP requests to escalated complaints, I maintained service standards, mentored staff, and consistently achieved high guest satisfaction. Fluent in <strong>Spanish, English, and French</strong>, I bridged communication gaps and earned recognition for service excellence.</p>
+          <p><strong>Guest Administration Officer (Promotion)</strong> — I took on immigration and regulatory compliance, managed enterprise systems (Fidelio Suite 8, JD Edwards, Kronos), and oversaw guest documentation across <strong>20+ international ports</strong>. I worked closely with port authorities, ensured compliance under pressure, and delivered smooth embarkation/debarkation experiences.</p>
+          <p>These roles strengthened my <strong>adaptability, leadership, and problem-solving skills</strong> in multicultural, high-pressure environments — qualities I now bring to technology and innovation.</p>
+          <p><strong>🚀 What I’m Doing Now</strong><br>
+          I’m earning an <strong>A.S. in Computer Science at CUNY BMCC</strong>, while building projects in <strong>Python, SQL, and AI</strong>. My portfolio blends <strong>data analytics</strong>, <strong>backend development</strong>, and <strong>front-end frameworks</strong> — always with a focus on making complex concepts clear through technology.</p>
+          <p>Alongside my degree, I pursue certifications with <strong>IBM, Microsoft, and Google (Coursera)</strong> to validate and expand my expertise. This dual path — academic growth plus industry validation — keeps me ahead of the curve and prepared to create solutions for today’s challenges and tomorrow’s innovations.</p>
+          <p><strong>🎶 Creativity Meets Technology</strong><br>
+          Beyond code, I’ve always believed in the creative power of music. Through <strong>Dhimix Entertainment</strong>, the DJ and event brand I founded, I design experiences that bring people together. Music has taught me lessons I carry into tech: <em>rhythm, timing, collaboration, and improvisation under pressure</em>.</p>
+          <p>Whether I’m performing live DJ sets, playing violin with friends, or engineering data solutions, the same principles apply: <strong>resilience, humility, and creativity</strong>. For me, creativity isn’t separate from technology — it’s the force that makes innovation human, adaptive, and unforgettable.</p>
+          <p><em>✨ In short: I transform complexity into clarity — whether through software, data, or sound.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="two">
+
+        <!-- BMCC -->
+        <div class="card">
+          <div class="card-body">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/27/Borough_of_Manhattan_Community_College_logo.png/220px-Borough_of_Manhattan_Community_College_logo.png" alt="BMCC Logo" class="edu-logo" />
+            <h3>BMCC, CUNY — New York, NY</h3>
+            <div class="muted">A.S. in Computer Science · Expected 2026</div>
+            <p>
+              Coursework emphasizes <strong>programming, data structures, databases, software development, advanced programming techniques, discrete structures, computer systems, and mathematics</strong>. 
+              Preparing for transfer to a 4-year Computer Science program, with a focus on building strong analytical, problem-solving, and software engineering skills.
+            </p>
+            <p><a href="https://www.bmcc.cuny.edu/" target="_blank">Visit BMCC</a></p>
+          </div>
+        </div>
+
+        <!-- UTESA -->
+        <div class="card">
+          <div class="card-body">
+            <img src="https://www.utesa.edu/home/images/logo.png" alt="UTESA Logo" class="edu-logo" />
+            <h3>UTESA — Santiago, Dominican Republic</h3>
+            <div class="muted">Technologist in Software Engineering (Bachelor-equivalent) · Graduated</div>
+            <p>
+              Completed comprehensive coursework in <strong>software engineering and design, programming languages, information systems, system design, database management, mathematics, physics, and IT</strong>. 
+              Developed a strong technical foundation integrating both theoretical knowledge and applied computing skills.
+            </p>
+            <p><a href="https://www.utesa.edu/home/index.php" target="_blank">Visit UTESA</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <h2>📬 Contact Me</h2>
+
+      <!-- Contact Form -->
+      <form id="contactForm" action="https://formspree.io/f/xzzjpzbw" method="POST">
+        <div class="inputs">
+          <label>Name 
+            <input type="text" name="name" required>
+          </label>
+          <label>Email 
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+        </div>
+        <label>Message 
+          <textarea name="message" rows="6" required></textarea>
+        </label>
+        <div class="actions">
+          <button type="submit" class="btn">Send</button>
+        </div>
+        <p id="formMsg" class="muted"></p>
+      </form>
+
+      <!-- Quick Links -->
+      <div class="widget" style="margin-top:1rem;">
+        <p><strong>Email:</strong> 
+          <a href="mailto:dhimyjean@dhimsoft.com">dhimyjean@dhimsoft.com</a>
+        </p>
+        <p><strong>Website:</strong> 
+          <a href="https://dhimsoft.com" target="_blank">dhimsoft.com</a>
+        </p>
+        <p><strong>GitHub:</strong> 
+          <a href="https://github.com/dhimsoft" target="_blank">github.com/dhimsoft</a>
+        </p>
+        <p><strong>LinkedIn:</strong> 
+          <a href="https://linkedin.com/in/dhimy-jean-6b716b10b" target="_blank">linkedin.com/in/dhimy-jean</a>
+        </p>
+      </div>
+
+      <!-- Google Map -->
+      <div class="widget" style="margin-top:1rem;">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9995931888266!2d-74.01133168459456!3d40.7127759793304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316fa1f7bb%3A0x8d9d98d1a46c5e1b!2sManhattan%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1697824523456!5m2!1sen!2sus" 
+          width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid-footer">
+        <div>
+          <h3 class="brand">Dhimsoft</h3>
+          <p class="muted">Building data &amp; AI products that ship.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Social</h4>
+          <ul>
+            <li><a href="https://github.com/dhimsoft" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/dhimy-jean-6b716b10b" target="_blank">LinkedIn</a></li>
+            <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © <span id="year"></span> Dhimy Jean · 
+          Email: <a href="mailto:dhimyjean@dhimsoft.com">dhimyjean@dhimsoft.com</a> · 
+          Phone: <a href="tel:+19298000822">(929) 800-0822</a> · 
+          Website: <a href="https://dhimsoft.com" target="_blank">dhimsoft.com</a> · 
+          GitHub: <a href="https://github.com/dhimsoft" target="_blank">github.com/dhimsoft</a> · 
+          LinkedIn: <a href="https://linkedin.com/in/dhimy-jean-6b716b10b" target="_blank">linkedin.com/in/dhimy-jean</a>
+        </p>
+        <p class="developer-credit">
+          Developed with ❤️ by <strong>Dhimy Jean</strong>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.mobile-toggle');
+    const links = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const open = links.style.display === 'block';
+      links.style.display = open ? '' : 'block';
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+
+    // Poem generator
+    const makeBtn = document.getElementById('makeBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    makeBtn.addEventListener('click', () => {
+      const plant = document.getElementById('plant').value || 'orchid';
+      const animal = document.getElementById('animal').value || 'dolphin';
+      document.getElementById('poem').textContent =
+        `Like the ${plant}, resilient and bright, 
+         And the ${animal}, graceful in flight — 
+         Together they show how nature’s art 
+         Inspires both code and the human heart.`;
+    });
+
+    // Contact form
+    const contactForm = document.getElementById("contactForm");
+    const formMsg = document.getElementById("formMsg");
+    if (contactForm) {
+      contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        formMsg.textContent = "⏳ Sending...";
+        try {
+          const res = await fetch(contactForm.action, {
+            method: "POST",
+            body: new FormData(contactForm),
+            headers: { Accept: "application/json" },
+          });
+          if (res.ok) {
+            formMsg.textContent = "✅ Message sent successfully!";
+            contactForm.reset();
+            setTimeout(() => (formMsg.textContent = ""), 4000);
+          } else {
+            formMsg.textContent = "⚠️ Something went wrong. Please check your input.";
+          }
+        } catch (err) {
+          formMsg.textContent = "⚠️ Network error. Please try again later.";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
