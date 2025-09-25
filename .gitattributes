@@ -1,0 +1,22 @@
+# ==========================
+# Handle line endings consistently
+# ==========================
+* text=auto eol=lf
+
+# ==========================
+# Syntax highlighting for GitHub
+# ==========================
+*.html linguist-language=HTML
+*.css  linguist-language=CSS
+*.js   linguist-language=JavaScript
+*.md   linguist-language=Markdown
+
+# ==========================
+# Binary assets (no diffs in GitHub)
+# ==========================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary

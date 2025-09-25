@@ -1,17 +1,43 @@
-node_modules
-.next
-out
-.next-static
+# === Dependencies ===
+node_modules/
+.pnp
+.pnp.js
+
+# === Build outputs ===
+.next/
+out/
+.next-static/
+dist/
+build/
+
+# === TypeScript ===
 *.tsbuildinfo
 
+# === Environment files ===
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env.*.local
 
+# === System files ===
 .DS_Store
-.vscode
-.vercel
+Thumbs.db
 
+# === IDE/editor ===
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# === Hosting/deployment ===
+.vercel/
+.netlify/
+.firebase/
+.aws/
+
+# === Package managers ===
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
