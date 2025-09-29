@@ -8,7 +8,7 @@ This is my **personal static portfolio website**, showcasing projects, skills, e
 Built with **HTML, CSS, and JavaScript**, it demonstrates my ability to deliver **responsive, accessible, and visually engaging web experiences**.  
 
 🔗 **Live Site:** [dhimsoft.github.io/dhimsoft-portfolio-static](https://dhimsoft.github.io/dhimsoft-portfolio-static)  
-🔗 **Main Domain (coming soon):** [dhimsoft.com](https://dhimsoft.com)  
+🔗 **Main Domain:** [dhimsoft.com](https://dhimsoft.com)  
 
 ---
 
