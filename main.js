@@ -1,4 +1,6 @@
+// ===============================
 // Contact form with Formspree
+// ===============================
 const form = document.getElementById('contactForm');
 const formMsg = document.getElementById('formMsg');
 
@@ -26,3 +28,19 @@ if (form) {
     }
   });
 }
+
+// ===============================
+// Typing Effect for Poem Output
+// ===============================
+function typePoem(text, elementId) {
+  const el = document.getElementById(elementId);
+  el.innerHTML = "";
+  let i = 0;
+  const interval = setInterval(() => {
+    el.innerHTML += text.charAt(i);
+    i++;
+    if (i > text.length) clearInterval(interval);
+  }, 40); // typing speed
+}
+
+
