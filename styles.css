@@ -1045,8 +1045,6 @@ header {
 }
 
 
-
-
 /* ===== Navbar Base ===== */
 header {
   display: flex;
@@ -1127,47 +1125,99 @@ header {
   }
 }
 
+
+
 /* ===============================
-   Education cards spacing fix
+   Education Section (final fix)
 =================================*/
 .education-card {
-  min-height: auto !important;
-  padding: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-}
-
-.education-card p {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  display: flex;
+  align-items: center;        /* vertical center */
+  gap: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .education-card:last-child {
-  margin-bottom: 0 !important;
-}
-.header {
-  display: flex;
-  flex-direction: column; /* stack brand + nav */
-  align-items: center;
-  padding: 0.5rem;
+  margin-bottom: 0;
 }
 
-.brand {
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #f4d58d;
-}
 .edu-logo {
-  width: 60px;
-  height: 60px;
-  object-fit: contain; /* keeps logos proportional */
-  margin-right: 1rem;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;             /* logo won’t shrink */
+}
+
+.education-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* ensures text is centered vertically */
+}
+
+.education-card h3 {
+  margin: 0 0 0.3rem 0;
+}
+
+.education-card p {
+  margin: 0.3rem 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.education-card a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.education-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 600px) {
+  .education-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .edu-logo {
+    margin-bottom: 1rem;
+  }
+
+  .education-card div {
+    justify-content: flex-start; /* reset for stacked view */
+  }
+
+  .education-card p {
+    text-align: center;
+  }
 }
 
 .education-card {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+.education-card div {
+  flex: 1;                /* let text expand */
+  max-width: 800px;       /* keep it readable */
+}
+
+.edu-logo {
+  width: 120px;
+  height: auto;
+  margin-top: 1.5rem;
+  object-fit: contain;
 }
