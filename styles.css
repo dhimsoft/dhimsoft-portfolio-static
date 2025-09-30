@@ -1156,3 +1156,18 @@ header {
   font-weight: bold;
   color: #f4d58d;
 }
+.edu-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* keeps logos proportional */
+  margin-right: 1rem;
+}
+
+.education-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
