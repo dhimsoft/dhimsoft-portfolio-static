@@ -13,21 +13,34 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- ================= HEADER ================= -->
-  <header class="header" role="banner">
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#home">Dhimy Jean</a>
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">Menu</button>
-      <div class="links" id="nav-links">
-        <a class="btn" href="#home">Home</a>
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#skills">Skills</a>
-        <a class="btn" href="#about">About</a>
-        <a class="btn" href="#education">Education</a>
-        <a class="btn" href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
+  <link rel="stylesheet" href="styles.css?v=2">
+<script src="main.js?v=2"></script>
+
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+  <div class="brand">Dhimy Jean</div>
+
+  <!-- Menu Button -->
+  <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+    ☰ Menu
+  </button>
+
+  <!-- Nav -->
+  <nav id="site-nav" class="nav">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+
+<!-- make sure your script loads AFTER HTML or use defer -->
+<script src="main.js" defer></script>
 
 
       <!-- ================= MAIN ================= -->
@@ -442,11 +455,6 @@
          Together they show how nature’s art 
          Inspires both code and the human heart.`;
     });
-
-
-
-
-    
 
     // Contact form
     const contactForm = document.getElementById("contactForm");

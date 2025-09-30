@@ -1,11 +1,11 @@
 // ===============================
 // Contact form with Formspree
 // ===============================
-const form = document.getElementById('contactForm');
-const formMsg = document.getElementById('formMsg');
+const form = document.getElementById("contactForm");
+const formMsg = document.getElementById("formMsg");
 
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     formMsg.textContent = "⏳ Sending...";
 
@@ -34,6 +34,7 @@ if (form) {
 // ===============================
 function typePoem(text, elementId) {
   const el = document.getElementById(elementId);
+  if (!el) return;
   el.innerHTML = "";
   let i = 0;
   const interval = setInterval(() => {
@@ -43,6 +44,53 @@ function typePoem(text, elementId) {
   }, 40); // typing speed
 }
 
+// ===============================
+// Mobile Menu Toggle
+// ===============================
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+
+    // accessibility update
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+    menuToggle.setAttribute("aria-expanded", !expanded);
+  });
+
+  // Auto-close menu when a link is clicked
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+      menuToggle.setAttribute("aria-expanded", false);
+    });
+  });
+}
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav");
+  const navLinks = document.querySelectorAll(".nav a");
 
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+
+      // accessibility update
+      const expanded =
+        menuToggle.getAttribute("aria-expanded") === "true" || false;
+      menuToggle.setAttribute("aria-expanded", !expanded);
+    });
+
+    // Auto-close menu when a link is clicked
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", false);
+      });
+    });
+  }
+});
