@@ -655,3 +655,312 @@ button:hover {
 .contact-card a:hover {
   color: var(--accent);
   text-shadow: 0 0 12px var(--accent);}
+
+  /* General mobile reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar fixes */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav a {
+  flex: 1 1 auto;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* Hero section */
+.header, main, section {
+  padding: 1rem;
+}
+
+/* Responsive text */
+h1, h2, h3, p {
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Media query for very small screens */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .brand {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: #0d1b2a;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    background: #0d1b2a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .nav {
+    display: flex !important;   /* force menu visible */
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Desktop nav */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hide toggle button on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .nav {
+    display: none;              /* hidden by default */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: #0d1b2a;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .nav.active {
+    display: flex;              /* show when toggled */
+  }
+
+  .menu-toggle {
+    display: block;
+    background: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0.5rem auto;
+  }
+}
+
+/* ===== Base Nav ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #0d1b2a;
+  color: white;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Toggle button ===== */
+.menu-toggle {
+  display: none;
+  background: #0d1b2a;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;  /* hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #0d1b2a;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+  }
+
+  .nav.active {
+    display: flex;  /* visible when toggled */
+  }
+
+  .nav a {
+    width: 100%; /* make links fill width */
+    padding: 0.75rem;
+  }
+}
+
+/* Mobile nav patch */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .nav a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    text-align: left;
+  }
+
+  .menu-toggle {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* ===============================
+   Final Nav Fix (Overrides)
+=================================*/
+
+/* Desktop nav stays inline */
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Hide menu toggle on desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    background: #0d1b2a;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin: 0.5rem auto;
+  }
+
+  .nav {
+    display: none;               /* hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #0d1b2a;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    gap: 0.75rem;
+  }
+
+  .nav.active {
+    display: flex;               /* visible when toggled */
+  }
+
+  .nav a {
+    width: 100%;                 /* full-width links */
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .nav.active {
+    max-height: 500px; /* adjust depending on your links */
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.8rem);
+}
+.hero .subtitle {
+  font-size: clamp(1rem, 4vw, 1.4rem);
+}
+
+/* Education cards spacing fix */
+.education-card {
+  min-height: auto !important;   /* no forced height */
+  padding: 1.5rem !important;    /* tighter spacing */
+  margin-bottom: 1.0rem !important;
+}
+
+.education-card p {
+  margin-bottom: 0.5rem;         /* tighten paragraph spacing */
+  line-height: 1.5;              /* keep readable but compact */
+}
+
+/* Remove unnecessary bottom gap in last card */
+.education-card:last-child {
+  margin-bottom: 0 !important;
+}
