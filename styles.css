@@ -1221,3 +1221,18 @@ header {
   margin-top: 1.5rem;
   object-fit: contain;
 }
+
+.header {
+  display: flex;
+  flex-direction: column; /* stack brand on top of menu */
+  align-items: center;    /* center horizontally */
+  padding: 0.5rem;
+  gap: 0.3rem; /* small space between brand and menu */
+}
+
+.brand {
+  font-weight: bold;
+  color: #f4d58d;
+  font-size: 1.2rem;
+}
+
